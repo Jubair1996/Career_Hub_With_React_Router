@@ -10,6 +10,9 @@ const Header = () => {
     <li>
        <NavLink to="/category">Category</NavLink> 
     </li>
+    <li>
+       <NavLink to="/features">Features</NavLink> 
+    </li>
     </>
   return (
     <div className="navbar bg-base-100">

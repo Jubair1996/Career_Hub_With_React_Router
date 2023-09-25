@@ -7,6 +7,15 @@ import AppliedJob from "../AppliedJob/AppliedJob";
 const AppliedJobs = () => {
     const jobs = useLoaderData();
     const [appliedJobs, setAppliedJobs] = useState([]);
+    <div className="flex justify-end">
+        <details className="dropdown my-6">
+            <summary className="m-1 btn">open or close</summary>
+            <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+            </ul>
+        </details>
+        </div>
     useEffect(() =>{
         const storedJobIds = getStoredJobApplication();
         if(jobs.length > 0){
@@ -24,10 +33,9 @@ const AppliedJobs = () => {
     },[jobs])
     return (
         <div>
-           <h1>Applied Jobs:  {appliedJobs.logo}</h1>
            <div>
             {
-                appliedJobs.map(applied => <AppliedJob key={applied.id} applied={applied}></AppliedJob>)
+                appliedJobs.map(applied => <AppliedJob key={applied.id}  applied={applied}></AppliedJob>)
             }
            </div>
         </div>

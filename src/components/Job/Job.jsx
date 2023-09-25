@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import { GrLocation } from "react-icons/gr";
 import { AiOutlineDollar } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 const Job = ({job}) => {
-    const {logo,job_title,company_name,remote_or_onsite,job_type,location,salary} = job;
+    const {id,logo,job_title,company_name,remote_or_onsite,job_type,location,salary} = job;
     return (
         <div className='border rounded px-10 py-6 space-y-3'>
             <img src={logo} alt="" />
@@ -22,7 +23,9 @@ const Job = ({job}) => {
                     <p>Salary: {salary}</p>
                 </div>
             </div>
+            <Link to={`/job/${id}`}>
             <button className=' font-semibold text-xl bg-gradient-to-r from-[#7E90FE] to-[#9873FF] rounded px-4 py-2 text-white'>View Details</button>
+            </Link>
         </div>
     );
 };

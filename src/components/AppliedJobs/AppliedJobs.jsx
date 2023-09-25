@@ -1,8 +1,9 @@
+import FeaturesList from "../FeaturesList/FeaturesList";
 
 const AppliedJobs = () => {
     return (
         <div>
-           <h1>Applied jobs</h1> 
+           <FeaturesList></FeaturesList> 
         </div>
     );
 };
